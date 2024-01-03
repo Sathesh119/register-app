@@ -4,6 +4,7 @@ pipeline {
         jdk 'Java17'
         maven 'Maven3'
     }
+    
  stages{
         stage("Cleanup Workspace"){
                 steps {
@@ -13,7 +14,7 @@ pipeline {
 
         stage("Checkout from SCM"){
                 steps {
-                    git branch: 'main', credentialsId: 'Github', url: 'https://github.com/Sathesh119/register-app.git'
+                    git branch: 'main', credentialsId: 'Github', url: 'https://github.com/Sathesh119/register-app'
                 }
         }
 
